@@ -2,18 +2,21 @@
 title: Pink Beauty Salon
 publishDate: 2024-01-06 00:00:00
 img: /assets/pink-beauty-salon.png
-img_alt: British Airways flight in air
+img_alt: Pink Beauty Salon homepage screenshot
 description: |
-  Website for salon services, and product promotions.
+  AI-powered Shopify site with a custom GPT-based booking and consultation system.
 tags:
-  - Design
+  - AI Integration
+  - GPT
+  - Booking System
   - Shopify
   - SEO
+  - UX Design
 ---
-For Pink Beauty Salon, the objective was to design and develop a Shopify website that showcases their salon services and products and enhances their brand's online presence. As their dedicated SEO strategist, I revitalised their existing website to highlight their premium offerings.
+For Pink Beauty Salon, I led the development of a modern Shopify website to showcase their beauty services, promote products, and enhance their brand's online presence.
 
-I expanded their service offerings, ensuring each addition was strategically aligned with their brand. Significant attention was given to revamping the website's headers and footers, creating a more impactful and cohesive user experience.
+Beyond the website design, I engineered a custom **AI-powered booking system** using **OpenAI's GPT models**. This intelligent solution streamlines client consultations by automating appointment intake, understanding customer preferences, and providing personalized recommendations—saving staff time and improving customer experience.
 
-A core part of my strategy involved leveraging Search Engine Optimization. I enriched their website with high-quality content tailored to each service, enhancing organic promotion and visibility. This SEO-centric approach was designed to attract more visitors and establish Pink Beauty Salon as a leader in its market segment.
+I also played a key role as their SEO strategist, ensuring each service page was enriched with high-quality, search-optimized content. The site structure was improved by revamping headers and footers, enabling a seamless and intuitive user journey.
 
-Through these targeted improvements, Pink Beauty Salon's website now stands as a testament to its excellence, easily discoverable by clients seeking top-tier beauty solutions.
+Thanks to these enhancements, Pink Beauty Salon now runs an efficient, smart booking experience and attracts more organic traffic, reinforcing its position as a leading beauty destination in London.
