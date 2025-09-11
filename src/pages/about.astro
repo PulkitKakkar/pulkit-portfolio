@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Pulkit Kakkar" description="About Pulkit Kakkar Lorem Ipsum">
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero
+          title="About"
+          tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+      >
+        <img
+            width="1553"
+            height="873"
+            src="/assets/at-work.jpeg"
+            alt="Pulkit Kakkar at work with a colleague"
+        />
+      </Hero>
+
+      <section>
+        <h2 class="section-title">Background</h2>
+        <div class="content">
+          <p>
+            As a Full Stack Developer originally from India, currently working in the UK, I bring a wealth of experience
+            and a diverse skill set to my role.
+          </p>
+          <br/>
+          <p>
+            My expertise is particularly strong in Angular, JavaScript, and TypeScript, among other technologies.
+            Currently, I am contributing effectively to British Airways, under contract with Coforge UK Ltd. Over the
+            past five years, my career has evolved significantly. I began as a Backend Developer, advanced to a Subject
+            Matter Expert (SME), and have now grown into a versatile role encompassing both Frontend and Full Stack
+            Development responsibilities.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Education</h2>
+        <div class="content">
+          <p>I completed my higher education in India, graduating in 2017 with a Bachelor of Technology degree in
+            Computer Science and Engineering from the esteemed Dr. A. P. J. Abdul Kalam Technical University. This educational
+            foundation has provided me with a strong basis in various aspects of computer science, which I have
+            continuously applied and expanded upon in my professional career.</p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Skills</h2>
+        <div class="content">
+          <ul>
+            <li>
+              Angular
+            </li>
+            <li>
+              HTML/CSS
+            </li>
+            <li>
+              RxJS
+            </li>
+            <li>
+              Amazon Web Services (AWS)
+            </li>
+            <li>
+              Adobe Target
+            </li>
+            <li>
+              JavaScript/TypeScript
+            </li>
+            <li>
+              Cypress
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <ContactCTA/>
+  </div>
+</BaseLayout>
+
+<style>
+    .about {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+    }
+
+    img {
+        margin-top: 1.5rem;
+        border-radius: 1.5rem;
+        box-shadow: var(--shadow-md);
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        color: var(--gray-200);
+    }
+
+    .section-title {
+        grid-column-start: 1;
+        font-size: var(--text-xl);
+        color: var(--gray-0);
+    }
+
+    .content {
+        grid-column: 2 / 4;
+    }
+
+    .content :global(a) {
+        text-decoration: 1px solid underline transparent;
+        text-underline-offset: 0.25em;
+        transition: text-decoration-color var(--theme-transition);
+    }
+
+    .content :global(a:hover),
+    .content :global(a:focus) {
+        text-decoration-color: currentColor;
+    }
+
+    @media (min-width: 50em) {
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 60% 1fr;
+        }
+
+        .about > :global(:first-child) {
+            grid-column-start: 2;
+        }
+
+        section {
+            display: contents;
+            font-size: var(--text-lg);
+        }
+    }
+</style>
