@@ -182,6 +182,13 @@ declare module 'astro:content' {
   collection: "work";
   data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
+"nested/pink-salon copy.md": {
+	id: "nested/pink-salon copy.md";
+  slug: "nested/pink-salon-copy";
+  body: string;
+  collection: "work";
+  data: InferEntrySchema<"work">
+} & { render(): Render[".md"] };
 "nested/pink-salon.md": {
 	id: "nested/pink-salon.md";
   slug: "nested/pink-salon";
