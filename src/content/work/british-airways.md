@@ -14,19 +14,26 @@ tags:
 ---
 Over the past 8 years at British Airways, my role has grown from Senior Frontend Engineer into Technical Design Lead responsibilities across key parts of the airline’s digital customer journey.
 
-I look after technical design and delivery for the **classic booking and payment journey**, aligning frontend, backend, payment services, CMS, and integration work so teams can deliver changes with clear ownership and fewer surprises.
+## Context
 
-My work includes understanding and shaping secure payment flows across **3DS, tokenisation, authorization, payment orchestration, and third-party payment integrations**, as well as supporting CMS-driven content such as co-brand card offers and contextual promotions.
+The classic booking and payment journey is a complex customer flow with multiple frontend, backend, payment, CMS, and integration touchpoints. Changes need to be technically clear, well sliced, and safe to deliver without disrupting the booking experience.
 
-I stay close to delivery by helping break work into clear technical items, identifying dependencies, managing blockers, reviewing implementation choices, and supporting engineering standards across Angular, TypeScript, services, and integration points.
+## Role
 
-My responsibilities included:
+I look after technical design and delivery for this journey, aligning teams around practical architecture decisions and helping turn requirements into buildable technical work. I stay close to implementation, delivery planning, and production support rather than working only at a design-document level.
+
+## Key Areas
+
 - Creating end-to-end technical designs for booking, payment, content, and integration changes
 - Aligning frontend and backend architecture across squads and delivery teams
+- Shaping secure payment flows across 3DS, tokenisation, authorization, payment orchestration, and third-party payment integrations
+- Supporting CMS-driven content such as co-brand card offers and contextual promotions
 - Supporting technical readiness, item slicing, dependency tracking, and blocker management
 - Investigating production issues using logs, Splunk, transaction IDs, MRNs, and session IDs
 - Supporting vulnerability management, technical risk reviews, and governance activity
 - Maintaining code quality, engineering standards, and long-term maintainability
 - Supporting managed service transition through clear documentation and knowledge handover
 
-This role is still hands-on. I work close to the code, the delivery plan, and the production journey to help teams ship technically sound, scalable solutions.
+## Impact
+
+This role helps teams move from uncertainty to a clear delivery path. The focus is on technically sound decisions, fewer missed dependencies, faster issue investigation, smoother handover, and solutions that are easier to maintain once they reach production.

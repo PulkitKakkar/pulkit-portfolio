@@ -27,9 +27,12 @@ const projects = (await getCollection("work"))
       <header class="hero">
         <Hero
           title="Hello, my name is Pulkit Kakkar"
-          tagline="Technical Design Lead focused on end-to-end solution design, Angular, payments, architecture, and delivery. I work across frontend, backend, CMS integrations, production support, and technical governance to help teams deliver scalable, maintainable solutions."
+          tagline="Technical Design Lead with a strong frontend foundation, now focused on end-to-end solution design across booking, payments, CMS integrations, production support, and delivery governance."
           align="start"
         >
+          <p class="role-line">
+            Technical Design Lead · Angular · Payments · Architecture · Delivery
+          </p>
           <div class="roles">
             <Pill><Icon icon="code" size="1.33em" /> Technical Design Lead</Pill>
             <Pill
@@ -51,6 +54,42 @@ const projects = (await getCollection("work"))
           src="/assets/portrait.jpg"
         />
       </header>
+
+      <section class="focus-areas" aria-labelledby="focus-heading">
+        <div class="focus-intro">
+          <h2 id="focus-heading">What I work on</h2>
+          <p>
+            I help turn complex journey, integration, and delivery problems into
+            clear technical plans that teams can build, support, and evolve.
+          </p>
+        </div>
+        <div class="focus-list">
+          <article>
+            <Icon icon="pencil-line" color="var(--accent-regular)" size="2rem" gradient />
+            <h3>Solution Design</h3>
+            <p>
+              Frontend and backend alignment, integration design, technical
+              readiness, and practical architecture decisions.
+            </p>
+          </article>
+          <article>
+            <Icon icon="rocket-launch" color="var(--accent-regular)" size="2rem" gradient />
+            <h3>Payments & Booking</h3>
+            <p>
+              Booking and payment journeys covering 3DS, tokenisation,
+              authorization, orchestration, and issue investigation.
+            </p>
+          </article>
+          <article>
+            <Icon icon="terminal-window" color="var(--accent-regular)" size="2rem" gradient />
+            <h3>Delivery Leadership</h3>
+            <p>
+              Item slicing, dependency tracking, blocker management, governance,
+              handover, and maintainable engineering standards.
+            </p>
+          </article>
+        </div>
+      </section>
 
       <Skills />
     </div>
@@ -102,6 +141,15 @@ const projects = (await getCollection("work"))
     display: none;
   }
 
+  .role-line {
+    max-width: 58ch;
+    margin: 0;
+    color: var(--accent-regular);
+    font-family: var(--font-brand);
+    font-size: var(--text-sm);
+    font-weight: 600;
+  }
+
   .hero img {
     aspect-ratio: 5 / 4;
     object-fit: cover;
@@ -128,6 +176,65 @@ const projects = (await getCollection("work"))
       aspect-ratio: 3 / 4;
       border-radius: 4.5rem;
       object-fit: cover;
+    }
+  }
+
+  /* ====================================================== */
+
+  .focus-areas {
+    display: grid;
+    gap: 1.5rem;
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    background-color: var(--gray-999_40);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .focus-intro {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .focus-intro h2 {
+    font-size: var(--text-xl);
+  }
+
+  .focus-intro p,
+  .focus-list p {
+    color: var(--gray-400);
+  }
+
+  .focus-list {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .focus-list article {
+    display: grid;
+    align-content: start;
+    gap: 0.5rem;
+  }
+
+  .focus-list h3 {
+    font-size: var(--text-lg);
+  }
+
+  @media (min-width: 50em) {
+    .focus-areas {
+      grid-template-columns: 0.9fr 2fr;
+      gap: 3rem;
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+    }
+
+    .focus-intro h2 {
+      font-size: var(--text-2xl);
+    }
+
+    .focus-list {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
     }
   }
 
