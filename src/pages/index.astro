@@ -21,7 +21,10 @@ const projects = (await getCollection("work"))
   .slice(0, 4);
 ---
 
-<BaseLayout>
+<BaseLayout
+  title="Pulkit Kakkar | Technical Design Lead"
+  description="Technical Design Lead focused on end-to-end solution design across Angular, payments, architecture, CMS integrations, production support, and delivery governance."
+>
   <div class="stack gap-20 lg:gap-48">
     <div class="wrapper stack gap-8 lg:gap-20">
       <header class="hero">
@@ -45,6 +48,14 @@ const projects = (await getCollection("work"))
               ><Icon icon="paper-plane-tilt" size="1.33em" /> Hands-on Engineering</Pill
             >
           </div>
+          <a
+            class="resume-link"
+            href="/assets/resume/Pulkit_Kakkar_Technical_Design_Lead_Resume.pdf"
+            download
+          >
+            Download Resume
+            <Icon icon="arrow-right" size="1.1em" />
+          </a>
         </Hero>
 
         <img
@@ -139,6 +150,28 @@ const projects = (await getCollection("work"))
 
   .roles {
     display: none;
+  }
+
+  .resume-link {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    gap: 0.5rem;
+    color: var(--gray-0);
+    font-family: var(--font-brand);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition:
+      color var(--theme-transition),
+      text-decoration-color var(--theme-transition);
+  }
+
+  .resume-link:hover,
+  .resume-link:focus {
+    color: var(--accent-regular);
+    text-decoration-color: currentColor;
   }
 
   .role-line {
