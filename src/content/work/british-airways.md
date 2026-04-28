@@ -12,7 +12,7 @@ tags:
   - Accessibility
   - Splunk
 ---
-Over the past 8 years at British Airways, my role has grown from Senior Frontend Engineer into Technical Design Lead responsibilities across key parts of the airline’s digital customer journey.
+Over the past 9 years at British Airways, my role has grown from Senior Frontend Engineer into Technical Design Lead responsibilities across key parts of the airline’s digital customer journey.
 
 ## Context
 
