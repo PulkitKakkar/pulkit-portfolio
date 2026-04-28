@@ -4,7 +4,7 @@ publishDate: 2024-01-06 00:00:00
 img: /assets/pink-beauty-salon.png
 img_alt: Pink Beauty Salon homepage screenshot
 description: |
-  AI-powered Shopify site with a custom GPT-based booking and consultation system.
+  Shopify website and AI-assisted booking flow designed to improve service discovery, consultation intake, and operational efficiency.
 tags:
   - AI Integration
   - GPT
@@ -13,10 +13,10 @@ tags:
   - SEO
   - UX Design
 ---
-For Pink Beauty Salon, I led the development of a modern Shopify website to showcase their beauty services, promote products, and enhance their brand's online presence.
+For Pink Beauty Salon, I led the technical design and development of a modern Shopify website to showcase services, promote products, and improve the customer journey from discovery to consultation.
 
-Beyond the website design, I engineered a custom **AI-powered booking system** using **OpenAI's GPT models**. This intelligent solution streamlines client consultations by automating appointment intake, understanding customer preferences, and providing personalized recommendations—saving staff time and improving customer experience.
+Beyond the website build, I engineered a custom **AI-powered booking system** using **OpenAI's GPT models**. The solution supports appointment intake, captures customer preferences, and provides useful recommendations while keeping the flow simple for staff and clients.
 
-I also played a key role as their SEO strategist, ensuring each service page was enriched with high-quality, search-optimized content. The site structure was improved by revamping headers and footers, enabling a seamless and intuitive user journey.
+I also shaped the SEO and content structure, improving service pages, headers, footers, and navigation so the site is easier to maintain and easier for customers to use.
 
-Thanks to these enhancements, Pink Beauty Salon now runs an efficient, smart booking experience and attracts more organic traffic, reinforcing its position as a leading beauty destination in London.
+The result is a cleaner digital experience with a more structured booking flow, stronger organic visibility, and a technical foundation the business can continue to build on.

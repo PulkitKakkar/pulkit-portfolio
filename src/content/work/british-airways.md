@@ -3,25 +3,30 @@ title: British Airways
 publishDate: 2023-12-08 00:00:00
 img: /assets/stock-3.jpg
 img_alt: Pearls of silky soft white cotton, bubble up under vibrant lighting
-description: "Senior Frontend Engineer at British Airways with 8 years of experience building accessible, scalable, and high-conversion web platforms."
+description: "Technical Design Lead experience at British Airways across classic booking, payments, architecture, integrations, production support, and delivery."
 tags:
   - Angular
+  - Technical Design
+  - Payments
+  - Solution Architecture
   - Accessibility
-  - A/B Testing
   - Splunk
-  - Frontend Architecture
-  - Automation Testing
 ---
-Over the past 8 years at British Airways, I’ve worked as a Senior Frontend Engineer contributing to multiple high-impact projects that power the airline’s digital customer journey.
+Over the past 8 years at British Airways, my role has grown from Senior Frontend Engineer into Technical Design Lead responsibilities across key parts of the airline’s digital customer journey.
 
-I led frontend development across major platforms like **flight search, seat selection, price breakdown, and booking flows**, consistently focusing on performance, accessibility, and usability. My work ensured compliance with WCAG standards, ultimately making BA one of the top two most accessible airline booking websites in the UK.
+I look after technical design and delivery for the **classic booking and payment journey**, aligning frontend, backend, payment services, CMS, and integration work so teams can deliver changes with clear ownership and fewer surprises.
 
-I actively contributed to **A/B testing and experimentation**, helping validate design decisions and optimize conversion rates. I also implemented tools for monitoring key UX metrics using Splunk dashboards, enabling data-driven decision-making across Digital and CI teams.
+My work includes understanding and shaping secure payment flows across **3DS, tokenisation, authorization, payment orchestration, and third-party payment integrations**, as well as supporting CMS-driven content such as co-brand card offers and contextual promotions.
+
+I stay close to delivery by helping break work into clear technical items, identifying dependencies, managing blockers, reviewing implementation choices, and supporting engineering standards across Angular, TypeScript, services, and integration points.
 
 My responsibilities included:
-- Leading Angular upgrades (v11 to v17) and enforcing scalable component architecture
-- Collaborating closely with designers, QAs, and product managers across squads
-- Building new features for the **Pay with Avios**, **Deep Linking**, and **Seat Map** experiences
-- Supporting observability via Splunk, SonarQube, Cypress, and automated testing pipelines
+- Creating end-to-end technical designs for booking, payment, content, and integration changes
+- Aligning frontend and backend architecture across squads and delivery teams
+- Supporting technical readiness, item slicing, dependency tracking, and blocker management
+- Investigating production issues using logs, Splunk, transaction IDs, MRNs, and session IDs
+- Supporting vulnerability management, technical risk reviews, and governance activity
+- Maintaining code quality, engineering standards, and long-term maintainability
+- Supporting managed service transition through clear documentation and knowledge handover
 
-My work has directly influenced BA's ability to rapidly experiment, scale, and improve customer experience in a competitive travel tech environment.
+This role is still hands-on. I work close to the code, the delivery plan, and the production journey to help teams ship technically sound, scalable solutions.
