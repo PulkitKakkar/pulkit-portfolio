@@ -13,10 +13,10 @@ import Hero from '../components/Hero.astro';
           tagline="I design and deliver practical technical solutions across customer journeys, integrations, and engineering teams."
       >
         <img
-            width="1553"
-            height="873"
-            src="/assets/at-work.jpeg"
-            alt="Pulkit Kakkar at work with a colleague"
+            width="480"
+            height="620"
+            src="/assets/portrait.jpg"
+            alt="Pulkit Kakkar"
         />
       </Hero>
 
@@ -56,33 +56,77 @@ import Hero from '../components/Hero.astro';
         </div>
       </section>
       <section>
-        <h2 class="section-title">Skills</h2>
-        <div class="content">
-          <ul>
-            <li>Angular</li>
-            <li>React & Vite</li>
-            <li>JavaScript / TypeScript</li>
-            <li>RxJS</li>
-            <li>HTML5 / CSS3</li>
-            <li>End-to-End Solution Design</li>
-            <li>Frontend & Backend Architecture Alignment</li>
-            <li>Secure Payment Flows, 3DS, Tokenisation & Authorization</li>
-            <li>AEM / CMS Integrations</li>
-            <li>Admin Workflow Design</li>
-            <li>Authentication Adapter & Integration Boundaries</li>
-            <li>Technical Readiness & Delivery Planning</li>
-            <li>Production Support, Logs & Splunk Investigation</li>
-            <li>Vulnerability Management & Technical Governance</li>
-            <li>Code Quality, Maintainability & Engineering Standards</li>
-            <li>Shopify (Liquid, Theme Customization)</li>
-            <li>Google Apps Script</li>
-            <li>Amazon Web Services (AWS)</li>
-            <li>OpenAI / GPT Integration</li>
-            <li>Splunk (Dashboards & Observability)</li>
-            <li>Cypress & Automation Testing</li>
-            <li>Adobe Target (A/B Testing)</li>
-            <li>Firebase</li>
-          </ul>
+        <h2 class="section-title">Tech Stack</h2>
+        <div class="content stack-grid">
+          <article>
+            <h3>Frontend</h3>
+            <ul>
+              <li>Angular</li>
+              <li>React</li>
+              <li>Vite</li>
+              <li>TypeScript</li>
+              <li>JavaScript</li>
+              <li>RxJS</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Responsive UI</li>
+              <li>Accessibility</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Architecture & Delivery</h3>
+            <ul>
+              <li>End-to-End Solution Design</li>
+              <li>Frontend & Backend Alignment</li>
+              <li>Technical Readiness</li>
+              <li>Item Slicing</li>
+              <li>Dependency Mapping</li>
+              <li>Delivery Governance</li>
+              <li>Code Quality</li>
+              <li>Maintainability</li>
+              <li>Knowledge Handover</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Payments & Integrations</h3>
+            <ul>
+              <li>3DS</li>
+              <li>Tokenisation</li>
+              <li>Authorization</li>
+              <li>Payment Orchestration</li>
+              <li>Authentication Adapters</li>
+              <li>Integration Boundaries</li>
+              <li>AEM / CMS Integrations</li>
+              <li>Admin Workflow Design</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Tooling, Cloud & Quality</h3>
+            <ul>
+              <li>AWS</li>
+              <li>Firebase</li>
+              <li>GitHub</li>
+              <li>CI/CD Awareness</li>
+              <li>Cypress</li>
+              <li>Splunk</li>
+              <li>Logs & Observability</li>
+              <li>Vulnerability Management</li>
+              <li>Production Support</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Platforms & AI</h3>
+            <ul>
+              <li>Shopify</li>
+              <li>Liquid</li>
+              <li>Google Apps Script</li>
+              <li>OpenAI / GPT Integration</li>
+              <li>Adobe Target</li>
+              <li>A/B Testing</li>
+              <li>SEO-aware Site Structure</li>
+              <li>Small Business Workflows</li>
+            </ul>
+          </article>
         </div>
       </section>
     </main>
@@ -98,7 +142,11 @@ import Hero from '../components/Hero.astro';
     }
 
     img {
+        width: min(100%, 32rem);
+        aspect-ratio: 4 / 3;
         margin-top: 1.5rem;
+        object-fit: cover;
+        object-position: center 28%;
         border-radius: 1.5rem;
         box-shadow: var(--shadow-md);
     }
@@ -141,6 +189,43 @@ import Hero from '../components/Hero.astro';
         color: var(--gray-0);
     }
 
+    .stack-grid {
+        display: grid;
+        gap: 1rem;
+    }
+
+    .stack-grid article {
+        display: grid;
+        gap: 0.85rem;
+        border: 1px solid var(--gray-800);
+        border-radius: 0.75rem;
+        padding: 1rem;
+        background: color-mix(in srgb, var(--gray-999) 86%, transparent);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .stack-grid h3 {
+        font-size: var(--text-lg);
+    }
+
+    .stack-grid ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        padding: 0;
+        list-style: none;
+    }
+
+    .stack-grid li {
+        border: 1px solid var(--gray-800);
+        border-radius: 999rem;
+        padding: 0.35rem 0.6rem;
+        color: var(--gray-300);
+        font-size: var(--text-xs);
+        line-height: 1;
+        background: var(--gray-999_40);
+    }
+
     @media (min-width: 50em) {
         .about {
             display: grid;
@@ -154,6 +239,19 @@ import Hero from '../components/Hero.astro';
         section {
             display: contents;
             font-size: var(--text-lg);
+        }
+
+        .stack-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .stack-grid article:first-child,
+        .stack-grid article:nth-child(2) {
+            grid-column: span 1;
+        }
+
+        .stack-grid article:last-child {
+            grid-column: 1 / -1;
         }
     }
 </style>
