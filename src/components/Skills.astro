@@ -7,16 +7,31 @@ import Icon from './Icon.astro';
 		<Icon icon="rocket-launch" color="var(--accent-regular)" size="2.5rem" gradient />
 		<h2>Technical Design</h2>
 		<p>End-to-end solution design across frontend, backend, payments, CMS integrations, technical readiness, and delivery flow.</p>
+		<ul>
+			<li>Journey mapping</li>
+			<li>Integration decisions</li>
+			<li>Delivery readiness</li>
+		</ul>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
 		<h2>Architecture & Quality</h2>
 		<p>Hands-on architecture alignment, code quality, maintainability, vulnerability management, and technical risk support for complex journeys.</p>
+		<ul>
+			<li>Angular and TypeScript</li>
+			<li>Governance</li>
+			<li>Maintainability</li>
+		</ul>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
 		<h2>Payments & Support</h2>
 		<p>Booking and payment journey ownership, including secure payment flows, orchestration, 3DS, tokenisation, authorization, Splunk, logs, and issue investigation.</p>
+		<ul>
+			<li>3DS and tokenisation</li>
+			<li>Production triage</li>
+			<li>Operational handover</li>
+		</ul>
 	</div>
 </section>
 
@@ -25,7 +40,7 @@ import Icon from './Icon.astro';
 		border: 1px solid var(--gray-800);
 		border-radius: 0.75rem;
 		padding: 1.5rem;
-		background-color: var(--gray-999_40);
+		background: color-mix(in srgb, var(--gray-999) 82%, transparent);
 		box-shadow: var(--shadow-sm);
 	}
 
@@ -43,6 +58,25 @@ import Icon from './Icon.astro';
 		color: var(--gray-400);
 	}
 
+	.skills ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.45rem;
+		margin-top: auto;
+		padding: 0;
+		list-style: none;
+	}
+
+	.skills li {
+		border: 1px solid var(--gray-800);
+		border-radius: 999rem;
+		padding: 0.35rem 0.6rem;
+		color: var(--gray-300);
+		font-size: var(--text-xs);
+		line-height: 1;
+		background: var(--gray-999_40);
+	}
+
 	@media (min-width: 50em) {
 		.box {
 			border-radius: 1.5rem;
@@ -52,11 +86,21 @@ import Icon from './Icon.astro';
 		.skills {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
-			gap: 5rem;
+			gap: 1rem;
 		}
 
 		.skills h2 {
 			font-size: var(--text-2xl);
+		}
+
+		.skills > div {
+			border-left: 1px solid var(--gray-800);
+			padding-left: 1.5rem;
+		}
+
+		.skills > div:first-child {
+			border-left: 0;
+			padding-left: 0;
 		}
 	}
 </style>

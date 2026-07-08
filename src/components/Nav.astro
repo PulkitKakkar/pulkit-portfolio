@@ -8,6 +8,7 @@ const textLinks: { label: string; href: string }[] = [
   { label: "Home", href: "/" },
   { label: "Work", href: "/work/" },
   { label: "About", href: "/about/" },
+  { label: "Contact", href: "/contact/" },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -65,8 +66,9 @@ const iconLinks: {
                 "link",
                 {
                   active:
-                    Astro.url.pathname === href ||
-                    (href !== "/" && Astro.url.pathname.startsWith(href)),
+                    href.startsWith("/") &&
+                    (Astro.url.pathname === href ||
+                      (href !== "/" && Astro.url.pathname.startsWith(href))),
                 },
               ]}
               href={href}
@@ -101,10 +103,11 @@ const iconLinks: {
               aria-current={Astro.url.pathname === href}
               class:list={[
                 "link",
-                {
-                  active:
-                    Astro.url.pathname === href ||
-                    (href !== "/" && Astro.url.pathname.startsWith(href)),
+                  {
+                    active:
+                      href.startsWith("/") &&
+                      (Astro.url.pathname === href ||
+                        (href !== "/" && Astro.url.pathname.startsWith(href))),
                 },
               ]}
               href={href}
@@ -156,7 +159,7 @@ const iconLinks: {
       };
 
       // Toggle menu visibility when the menu button is clicked.
-      btn.addEventListener("click", () => setExpanded(menu.hidden));
+      btn.addEventListener("click", () => setExpanded(menu.hasAttribute("hidden")));
 
       // Hide menu button for large screens.
       const handleViewports = (e: MediaQueryList | MediaQueryListEvent) => {
@@ -177,7 +180,7 @@ const iconLinks: {
     position: relative;
     font-family: var(--font-brand);
     font-weight: 500;
-    margin-bottom: 3.5rem;
+    margin-bottom: 2rem;
   }
 
   .menu-header {
@@ -298,9 +301,9 @@ const iconLinks: {
   @media (min-width: 50em) {
     nav {
       display: grid;
-      grid-template-columns: 1fr auto 1fr;
+      grid-template-columns: auto 1fr auto;
       align-items: center;
-      padding: 2.5rem 5rem;
+      padding: 2rem;
       gap: 1rem;
     }
 
@@ -317,6 +320,7 @@ const iconLinks: {
     }
 
     .nav-items {
+      justify-self: center;
       position: relative;
       flex-direction: row;
       font-size: var(--text-sm);
@@ -372,9 +376,18 @@ const iconLinks: {
 
   @media (min-width: 60em) {
     .socials {
-      display: flex;
+      display: none;
       justify-content: flex-end;
       gap: 0;
+    }
+  }
+  @media (min-width: 75em) {
+    nav {
+      padding-inline: 4rem;
+    }
+
+    .socials {
+      display: flex;
     }
   }
   @media (forced-colors: active) {

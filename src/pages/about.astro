@@ -6,7 +6,7 @@ import Hero from '../components/Hero.astro';
 ---
 
 <BaseLayout title="About | Pulkit Kakkar" description="Technical Design Lead focused on end-to-end solution design, Angular, payments, architecture, and delivery.">
-  <div class="stack gap-20">
+  <div class="stack gap-10 lg:gap-15">
     <main class="wrapper about">
       <Hero
           title="About"
@@ -37,6 +37,16 @@ import Hero from '../components/Hero.astro';
         </div>
       </section>
       <section>
+        <h2 class="section-title">Recruiter Snapshot</h2>
+        <div class="content snapshot">
+          <ul>
+            <li><strong>Current focus:</strong> technical design, frontend leadership, booking and payment journeys, CMS integrations, and delivery readiness.</li>
+            <li><strong>Strongest fit:</strong> Technical Design Lead, Lead Frontend Engineer, Solution Designer, or frontend-focused Technical Lead roles.</li>
+            <li><strong>Working style:</strong> hands-on enough to understand implementation detail, senior enough to align architecture, delivery, and support concerns.</li>
+          </ul>
+        </div>
+      </section>
+      <section>
         <h2 class="section-title">Education</h2>
         <div class="content">
           <p>I completed my higher education in India, graduating in 2017 with a Bachelor of Technology degree in
@@ -58,6 +68,8 @@ import Hero from '../components/Hero.astro';
             <li>Frontend & Backend Architecture Alignment</li>
             <li>Secure Payment Flows, 3DS, Tokenisation & Authorization</li>
             <li>AEM / CMS Integrations</li>
+            <li>Admin Workflow Design</li>
+            <li>Authentication Adapter & Integration Boundaries</li>
             <li>Technical Readiness & Delivery Planning</li>
             <li>Production Support, Logs & Splunk Investigation</li>
             <li>Vulnerability Management & Technical Governance</li>
@@ -117,6 +129,16 @@ import Hero from '../components/Hero.astro';
     .content :global(a:hover),
     .content :global(a:focus) {
         text-decoration-color: currentColor;
+    }
+
+    .snapshot ul {
+        display: grid;
+        gap: 0.75rem;
+        padding-left: 1.2rem;
+    }
+
+    .snapshot strong {
+        color: var(--gray-0);
     }
 
     @media (min-width: 50em) {

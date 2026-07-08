@@ -1,0 +1,124 @@
+---
+const steps = [
+  {
+    title: 'Customer Journey',
+    detail: 'Booking, content, payment, and confirmation touchpoints',
+  },
+  {
+    title: 'Experience Layer',
+    detail: 'Angular UI, validation, accessibility, state, analytics events',
+  },
+  {
+    title: 'Integration Layer',
+    detail: 'Backend APIs, CMS content, payment orchestration, auth boundaries',
+  },
+  {
+    title: 'Operations Layer',
+    detail: 'Logs, Splunk investigation, support handover, managed service context',
+  },
+];
+---
+
+<figure class="architecture-diagram" aria-labelledby="architecture-diagram-title">
+  <figcaption>
+    <span>Anonymised design pattern</span>
+    <strong id="architecture-diagram-title">How I frame complex customer-journey work</strong>
+  </figcaption>
+  <ol>
+    {
+      steps.map((step) => (
+        <li>
+          <h3>{step.title}</h3>
+          <p>{step.detail}</p>
+        </li>
+      ))
+    }
+  </ol>
+</figure>
+
+<style>
+  .architecture-diagram {
+    display: grid;
+    gap: 1rem;
+    max-width: 68rem;
+    margin: 2rem auto;
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    background:
+      linear-gradient(135deg, color-mix(in srgb, var(--accent-regular) 10%, transparent), transparent),
+      var(--gradient-subtle);
+    box-shadow: var(--shadow-sm);
+  }
+
+  figcaption {
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  figcaption span {
+    color: var(--accent-regular);
+    font-family: var(--font-brand);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  figcaption strong {
+    color: var(--gray-0);
+    font-family: var(--font-brand);
+    font-size: var(--text-xl);
+    line-height: 1.1;
+  }
+
+  ol {
+    display: grid;
+    gap: 0.75rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+    display: grid;
+    min-width: 0;
+    gap: 0.35rem;
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    background: color-mix(in srgb, var(--gray-999) 86%, transparent);
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    overflow-wrap: anywhere;
+  }
+
+  p {
+    color: var(--gray-400);
+    font-size: var(--text-sm);
+    overflow-wrap: anywhere;
+  }
+
+  @media (min-width: 50em) {
+    .architecture-diagram {
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+    }
+
+    ol {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    li:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -0.75rem;
+      width: 0.75rem;
+      height: 1px;
+      background: var(--accent-regular);
+    }
+  }
+</style>

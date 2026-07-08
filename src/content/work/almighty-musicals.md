@@ -31,3 +31,10 @@ I designed and developed the platform using **React**, **Vite**, and **Firebase*
 ## Impact
 
 Almighty Musicals now has a scalable foundation for wholesale operations, with clearer product discovery, better enquiry handling, and a structure that can support future inventory and supplier workflows. The website is ready to launch and is currently hosted at [main.d2zwc2np4txide.amplifyapp.com](https://main.d2zwc2np4txide.amplifyapp.com/), awaiting final inputs from the client.
+
+## Outcome Signals
+
+- Replaced a generic retail mindset with a quote-led wholesale journey
+- Made product discovery easier for bulk buyers and distributors
+- Created a structure that can scale as catalogue and supplier workflows grow
+- Kept the technical setup lightweight enough for a small business to maintain

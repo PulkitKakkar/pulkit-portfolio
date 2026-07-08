@@ -1,0 +1,163 @@
+---
+import Icon from './Icon.astro';
+
+const notes = [
+  {
+    title: 'Jas Repair',
+    type: 'Local service website',
+    description:
+      'A practical small-business web presence focused on trust, fast service discovery, and clear repair enquiries.',
+    tags: ['Service UX', 'Local SEO', 'Lead Capture'],
+  },
+  {
+    title: 'Pink Beauty admin',
+    type: 'Operations workflow',
+    description:
+      'Admin-side thinking for salon content, service management, appointment intake, and maintainable day-to-day updates.',
+    tags: ['Admin UX', 'Content Ops', 'Booking Flow'],
+  },
+  {
+    title: 'Auth adapter task',
+    type: 'Architecture support',
+    description:
+      'Adapter-level work around authentication boundaries, integration contracts, maintainability, and safer implementation handover.',
+    tags: ['Auth', 'Adapter Design', 'Integration'],
+  },
+];
+---
+
+<section class="field-notes" aria-labelledby="field-notes-heading">
+  <div class="intro">
+    <p class="eyebrow">Recent build notes</p>
+    <h2 id="field-notes-heading">Smaller pieces of work that show the same pattern.</h2>
+    <p>
+      Not every useful engagement needs a full case study. These are examples of
+      where I have been applying the same design, delivery, and implementation
+      thinking across business websites, admin tools, and integration tasks.
+    </p>
+  </div>
+  <div class="notes">
+    {
+      notes.map((note) => (
+        <article class="reveal">
+          <div class="note-topline">
+            <Icon icon="strategy" color="var(--accent-regular)" size="1.5rem" gradient />
+            <span>{note.type}</span>
+          </div>
+          <h3>{note.title}</h3>
+          <p>{note.description}</p>
+          <ul aria-label={`${note.title} focus areas`}>
+            {note.tags.map((tag) => (
+              <li>{tag}</li>
+            ))}
+          </ul>
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .field-notes {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .intro {
+    max-width: 48rem;
+  }
+
+  .eyebrow {
+    margin-bottom: 0.6rem;
+    color: var(--accent-regular);
+    font-family: var(--font-brand);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .intro h2 {
+    max-width: 16ch;
+    font-size: var(--text-2xl);
+  }
+
+  .intro p:last-child {
+    margin-top: 0.85rem;
+    color: var(--gray-400);
+    font-size: var(--text-md);
+  }
+
+  .notes {
+    display: grid;
+    gap: 1rem;
+  }
+
+  article {
+    display: grid;
+    align-content: start;
+    gap: 0.8rem;
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    background: color-mix(in srgb, var(--gray-999) 86%, transparent);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .note-topline {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-regular);
+    font-family: var(--font-brand);
+    font-size: var(--text-sm);
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: var(--text-xl);
+  }
+
+  article p {
+    color: var(--gray-400);
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    border: 1px solid var(--gray-800);
+    border-radius: 999rem;
+    padding: 0.35rem 0.6rem;
+    color: var(--gray-300);
+    font-size: var(--text-xs);
+    line-height: 1;
+    background: var(--gray-999_40);
+  }
+
+  @media (min-width: 50em) {
+    .field-notes {
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .intro {
+      position: sticky;
+      top: 2rem;
+    }
+
+    .intro h2 {
+      font-size: var(--text-3xl);
+    }
+
+    .notes {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

@@ -10,7 +10,6 @@ import Pill from "../components/Pill.astro";
 
 // Page section components
 import ContactCTA from "../components/ContactCTA.astro";
-import Skills from "../components/Skills.astro";
 import Grid from "../components/Grid.astro";
 import PortfolioPreview from "../components/PortfolioPreview.astro";
 import CallToAction from "../components/CallToAction.astro";
@@ -25,16 +24,16 @@ const projects = (await getCollection("work"))
   title="Pulkit Kakkar | Technical Design Lead"
   description="Technical Design Lead focused on end-to-end solution design across Angular, payments, architecture, CMS integrations, production support, and delivery governance."
 >
-  <div class="stack gap-20 lg:gap-48">
-    <div class="wrapper stack gap-8 lg:gap-20">
+  <div class="stack gap-8 lg:gap-10">
+    <div class="wrapper stack gap-8 lg:gap-10">
       <header class="hero">
         <Hero
-          title="Hello, my name is Pulkit Kakkar"
-          tagline="Technical Design Lead with a strong frontend foundation, now focused on end-to-end solution design across booking, payments, CMS integrations, production support, and delivery governance."
+          title="Technical Design Lead for booking, payments, and frontend delivery."
+          tagline="I’m Pulkit Kakkar. I turn complex customer journeys, integrations, and delivery constraints into buildable technical plans that teams can ship and support."
           align="start"
         >
           <p class="role-line">
-            Technical Design Lead · Angular · Payments · Architecture · Delivery
+            Technical Design Lead in the UK · Angular · Payments · Architecture · Delivery
           </p>
           <div class="roles">
             <Pill><Icon icon="code" size="1.33em" /> Technical Design Lead</Pill>
@@ -48,34 +47,82 @@ const projects = (await getCollection("work"))
               ><Icon icon="paper-plane-tilt" size="1.33em" /> Hands-on Engineering</Pill
             >
           </div>
-          <a
-            class="resume-link"
-            href="/assets/resume/Pulkit_Kakkar_Technical_Design_Lead_Resume.pdf"
-            download
-          >
-            Download Resume
-            <Icon icon="arrow-right" size="1.1em" />
-          </a>
+          <div class="hero-actions" aria-label="Contact and portfolio actions">
+            <a class="primary-link" href="mailto:pulkitkakkar176@gmail.com">
+              Let’s Talk
+              <Icon icon="paper-plane-tilt" size="1.1em" />
+            </a>
+            <a
+              class="resume-link"
+              href="/assets/resume/Pulkit_Kakkar_Technical_Design_Lead_Resume.pdf"
+              download
+            >
+              Download Resume
+              <Icon icon="arrow-right" size="1.1em" />
+            </a>
+          </div>
         </Hero>
 
-        <img
-          alt="Pulkit Kakkar smiling in a white shirt"
-          width="480"
-          height="620"
-          src="/assets/portrait.jpg"
-        />
+        <div class="portrait-panel">
+          <img
+            alt="Pulkit Kakkar smiling in a white shirt"
+            width="480"
+            height="620"
+            src="/assets/portrait.jpg"
+          />
+          <div class="availability-card" aria-label="Availability">
+            <span>Open to senior technical design and frontend leadership conversations</span>
+            <a href="mailto:pulkitkakkar176@gmail.com">pulkitkakkar176@gmail.com</a>
+          </div>
+        </div>
       </header>
+
+      <section class="signal-grid" aria-label="Professional highlights">
+        <article>
+          <strong>9+</strong>
+          <span>years building customer-facing digital products</span>
+        </article>
+        <article>
+          <strong>BA</strong>
+          <span>booking, payments, CMS, support, and delivery governance</span>
+        </article>
+        <article>
+          <strong>E2E</strong>
+          <span>solution design from discovery through handover</span>
+        </article>
+      </section>
+
+      <section class="recruiter-snapshot" aria-labelledby="snapshot-heading">
+        <div>
+          <p class="eyebrow">Recruiter snapshot</p>
+          <h2 id="snapshot-heading">Senior frontend foundation with end-to-end design ownership.</h2>
+        </div>
+        <dl>
+          <div>
+            <dt>Current focus</dt>
+            <dd>Technical design, delivery readiness, payment journeys, CMS integrations, and production support.</dd>
+          </div>
+          <div>
+            <dt>Strongest domains</dt>
+            <dd>Airline booking, secure payments, Angular delivery, service/admin workflows, and integration boundaries.</dd>
+          </div>
+          <div>
+            <dt>Best-fit roles</dt>
+            <dd>Technical Design Lead, Lead Frontend Engineer, Solution Designer, or frontend-focused Technical Lead.</dd>
+          </div>
+        </dl>
+      </section>
 
       <section class="focus-areas" aria-labelledby="focus-heading">
         <div class="focus-intro">
           <h2 id="focus-heading">What I work on</h2>
           <p>
-            I help turn complex journey, integration, and delivery problems into
-            clear technical plans that teams can build, support, and evolve.
+            The useful overlap between product intent, technical design, and
+            delivery reality.
           </p>
         </div>
         <div class="focus-list">
-          <article>
+          <article class="reveal">
             <Icon icon="pencil-line" color="var(--accent-regular)" size="2rem" gradient />
             <h3>Solution Design</h3>
             <p>
@@ -83,7 +130,7 @@ const projects = (await getCollection("work"))
               readiness, and practical architecture decisions.
             </p>
           </article>
-          <article>
+          <article class="reveal">
             <Icon icon="rocket-launch" color="var(--accent-regular)" size="2rem" gradient />
             <h3>Payments & Booking</h3>
             <p>
@@ -91,7 +138,7 @@ const projects = (await getCollection("work"))
               authorization, orchestration, and issue investigation.
             </p>
           </article>
-          <article>
+          <article class="reveal">
             <Icon icon="terminal-window" color="var(--accent-regular)" size="2rem" gradient />
             <h3>Delivery Leadership</h3>
             <p>
@@ -101,12 +148,10 @@ const projects = (await getCollection("work"))
           </article>
         </div>
       </section>
-
-      <Skills />
     </div>
 
-    <main class="wrapper stack gap-20 lg:gap-48">
-      <section class="section with-background with-cta">
+    <main class="wrapper stack gap-10 lg:gap-15">
+      <section class="section with-cta">
         <header class="section-header stack gap-2 lg:gap-4">
           <h3>Selected Work</h3>
           <p>
@@ -116,7 +161,7 @@ const projects = (await getCollection("work"))
         </header>
 
         <div class="gallery">
-          <Grid variant="offset">
+          <Grid>
             {
               projects.map((project) => (
                 <li>
@@ -145,33 +190,66 @@ const projects = (await getCollection("work"))
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
+  }
+
+  .hero :global(.title) {
+    font-size: var(--text-3xl);
   }
 
   .roles {
     display: none;
   }
 
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .primary-link,
   .resume-link {
     display: inline-flex;
     align-items: center;
     width: fit-content;
     gap: 0.5rem;
-    color: var(--gray-0);
     font-family: var(--font-brand);
     font-size: var(--text-sm);
     font-weight: 600;
-    text-decoration: 1px solid underline transparent;
-    text-underline-offset: 0.25em;
+    text-decoration: none;
+    border-radius: 999rem;
     transition:
+      background-color var(--theme-transition),
+      border-color var(--theme-transition),
       color var(--theme-transition),
-      text-decoration-color var(--theme-transition);
+      transform var(--theme-transition);
+  }
+
+  .primary-link {
+    padding: 0.8rem 1.15rem;
+    color: var(--accent-text-over);
+    background: var(--gradient-accent-orange);
+    box-shadow: var(--shadow-md);
+  }
+
+  .resume-link {
+    padding: 0.75rem 1.05rem;
+    color: var(--gray-0);
+    border: 1px solid var(--gray-700);
+    background-color: var(--gray-999_40);
+  }
+
+  .primary-link:hover,
+  .primary-link:focus,
+  .resume-link:hover,
+  .resume-link:focus {
+    transform: translateY(-0.125rem);
   }
 
   .resume-link:hover,
   .resume-link:focus {
+    border-color: var(--accent-regular);
     color: var(--accent-regular);
-    text-decoration-color: currentColor;
   }
 
   .role-line {
@@ -183,18 +261,51 @@ const projects = (await getCollection("work"))
     font-weight: 600;
   }
 
-  .hero img {
+  .portrait-panel {
+    position: relative;
+    width: min(100%, 30rem);
+  }
+
+  .portrait-panel img {
     aspect-ratio: 5 / 4;
+    width: 100%;
     object-fit: cover;
     object-position: top;
-    border-radius: 1.5rem;
+    border: 1px solid var(--gray-800);
+    border-radius: 1.25rem;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .availability-card {
+    display: grid;
+    gap: 0.35rem;
+    margin-top: 1rem;
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    background: color-mix(in srgb, var(--gray-999) 86%, transparent);
     box-shadow: var(--shadow-md);
+  }
+
+  .availability-card span {
+    color: var(--gray-200);
+    font-size: var(--text-sm);
+    font-weight: 600;
+  }
+
+  .availability-card a {
+    color: var(--accent-regular);
+    font-size: var(--text-sm);
+    overflow-wrap: anywhere;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
   }
 
   @media (min-width: 50em) {
     .hero {
       display: grid;
-      grid-template-columns: 6fr 4fr;
+      grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+      align-items: start;
       padding-inline: 2.5rem;
       gap: 3.75rem;
     }
@@ -202,13 +313,126 @@ const projects = (await getCollection("work"))
     .roles {
       margin-top: 0.5rem;
       display: flex;
+      flex-wrap: wrap;
       gap: 0.5rem;
     }
 
-    .hero img {
+    .portrait-panel img {
       aspect-ratio: 3 / 4;
-      border-radius: 4.5rem;
+      border-radius: 2rem;
       object-fit: cover;
+    }
+
+    .availability-card {
+      position: absolute;
+      right: 0;
+      bottom: 1.5rem;
+      width: min(20rem, 80%);
+      margin-top: 0;
+    }
+  }
+
+  /* ====================================================== */
+
+  .signal-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .signal-grid article {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    background: var(--gradient-subtle);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .signal-grid strong {
+    color: var(--accent-regular);
+    font-family: var(--font-brand);
+    font-size: var(--text-2xl);
+    line-height: 1;
+  }
+
+  .signal-grid span {
+    color: var(--gray-300);
+    font-size: var(--text-sm);
+  }
+
+  @media (min-width: 50em) {
+    .signal-grid {
+      grid-template-columns: repeat(3, 1fr);
+      padding-inline: 2.5rem;
+    }
+
+    .signal-grid article {
+      grid-template-columns: 1fr;
+      align-content: start;
+      min-height: 10rem;
+      padding: 1.35rem;
+    }
+  }
+
+  /* ====================================================== */
+
+  .recruiter-snapshot {
+    display: grid;
+    gap: 1.5rem;
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    background: var(--gradient-subtle);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .eyebrow {
+    margin-bottom: 0.5rem;
+    color: var(--accent-regular);
+    font-family: var(--font-brand);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .recruiter-snapshot h2 {
+    font-size: var(--text-xl);
+  }
+
+  .recruiter-snapshot dl {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .recruiter-snapshot div {
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  .recruiter-snapshot dt {
+    color: var(--gray-0);
+    font-family: var(--font-brand);
+    font-weight: 600;
+  }
+
+  .recruiter-snapshot dd {
+    color: var(--gray-400);
+  }
+
+  @media (min-width: 50em) {
+    .recruiter-snapshot {
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 3rem;
+      border-radius: 1.5rem;
+      padding: 2rem 2.5rem;
+    }
+
+    .recruiter-snapshot dl {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
@@ -220,7 +444,7 @@ const projects = (await getCollection("work"))
     border: 1px solid var(--gray-800);
     border-radius: 0.75rem;
     padding: 1.5rem;
-    background-color: var(--gray-999_40);
+    background: linear-gradient(135deg, var(--gray-999_40), color-mix(in srgb, var(--accent-regular) 10%, transparent));
     box-shadow: var(--shadow-sm);
   }
 
@@ -273,9 +497,136 @@ const projects = (await getCollection("work"))
 
   /* ====================================================== */
 
+  .process {
+    display: grid;
+    gap: 1.5rem;
+    border-block: 1px solid var(--gray-800);
+    padding-block: 3rem;
+  }
+
+  .eyebrow {
+    margin-bottom: 0.6rem;
+    color: var(--accent-regular);
+    font-family: var(--font-brand);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .process h2 {
+    font-size: var(--text-2xl);
+  }
+
+  .process ol {
+    display: grid;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .process li {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 1rem;
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--gray-800);
+  }
+
+  .process li:first-child {
+    border-top: 0;
+  }
+
+  .process li span {
+    color: var(--accent-warm);
+    font-family: var(--font-brand);
+    font-weight: 600;
+  }
+
+  .process h3 {
+    margin-bottom: 0.35rem;
+    font-size: var(--text-lg);
+  }
+
+  .process p {
+    color: var(--gray-400);
+  }
+
+  @media (min-width: 50em) {
+    .process {
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 4rem;
+      padding-block: 4rem;
+    }
+
+    .process h2 {
+      font-size: var(--text-3xl);
+    }
+  }
+
+  /* ====================================================== */
+
+  .timeline {
+    display: grid;
+    gap: 1.5rem;
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    background: var(--gradient-subtle);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .timeline h2 {
+    font-size: var(--text-2xl);
+  }
+
+  .timeline-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .timeline article {
+    display: grid;
+    gap: 0.35rem;
+    border-left: 2px solid var(--accent-regular);
+    padding-left: 1rem;
+  }
+
+  .timeline article span {
+    color: var(--accent-warm);
+    font-family: var(--font-brand);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .timeline h3 {
+    font-size: var(--text-lg);
+  }
+
+  .timeline article p {
+    color: var(--gray-400);
+  }
+
+  @media (min-width: 50em) {
+    .timeline {
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 3rem;
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+    }
+
+    .timeline h2 {
+      font-size: var(--text-3xl);
+    }
+  }
+
+  /* ====================================================== */
+
   .section {
     display: grid;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .with-background {
@@ -322,7 +673,7 @@ const projects = (await getCollection("work"))
     .section {
       grid-template-columns: repeat(4, 1fr);
       grid-template-areas: "header header header header" "gallery gallery gallery gallery";
-      gap: 5rem;
+      gap: 1.5rem;
     }
 
     .section.with-cta {

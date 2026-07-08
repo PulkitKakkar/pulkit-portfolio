@@ -7,33 +7,105 @@ import ContactCTA from '../components/ContactCTA.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Hero from '../components/Hero.astro';
 import Grid from '../components/Grid.astro';
+import FieldNotes from '../components/FieldNotes.astro';
 
 const projects = (await getCollection('work')).sort(
   (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
+const filters = ['All', 'Technical Design', 'Payments', 'AI Integration', 'Shopify', 'React'];
 ---
 
 <BaseLayout
     title="My Work | Pulkit Kakkar"
     description="Selected work by Pulkit Kakkar across technical design, architecture, delivery, integrations, and product engineering."
 >
-  <div class="stack gap-20">
-    <main class="wrapper stack gap-8">
+  <div class="stack gap-10 lg:gap-15">
+    <main class="wrapper stack gap-15">
       <Hero
           title="My Work"
           tagline="Case studies covering technical design, architecture, delivery, integrations, and hands-on product engineering."
           align="start"
       />
-      <Grid variant="offset">
-        {
-          projects.map((project) => (
-              <li>
-                <PortfolioPreview project={project} />
-              </li>
-          ))
-        }
-      </Grid>
+      <section class="work-browser" aria-label="Filter work">
+        <div class="filters" role="list" aria-label="Project filters">
+          {
+            filters.map((filter) => (
+              <button type="button" data-filter={filter} aria-pressed={filter === 'All'}>
+                {filter}
+              </button>
+            ))
+          }
+        </div>
+        <Grid variant="offset">
+          {
+            projects.map((project) => (
+                <li data-project-tags={project.data.tags.join(' ')}>
+                  <PortfolioPreview project={project} />
+                </li>
+            ))
+          }
+        </Grid>
+      </section>
+      <FieldNotes />
     </main>
     <ContactCTA />
   </div>
 </BaseLayout>
+
+<script>
+  const filterButtons = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
+  const projectItems = document.querySelectorAll<HTMLElement>('[data-project-tags]');
+
+  filterButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const filter = button.dataset.filter || 'All';
+      filterButtons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+
+      projectItems.forEach((item) => {
+        const tags = item.dataset.projectTags || '';
+        item.hidden = filter !== 'All' && !tags.includes(filter);
+      });
+    });
+  });
+</script>
+
+<style>
+  .work-browser {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  button {
+    border: 1px solid var(--gray-800);
+    border-radius: 999rem;
+    padding: 0.65rem 0.9rem;
+    color: var(--gray-300);
+    font-family: var(--font-brand);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    background: color-mix(in srgb, var(--gray-999) 86%, transparent);
+    cursor: pointer;
+    transition:
+      background-color var(--theme-transition),
+      border-color var(--theme-transition),
+      color var(--theme-transition);
+  }
+
+  button:hover,
+  button:focus {
+    border-color: var(--accent-regular);
+    color: var(--accent-regular);
+  }
+
+  button[aria-pressed='true'] {
+    border-color: var(--accent-regular);
+    color: var(--accent-text-over);
+    background: var(--accent-regular);
+  }
+</style>
