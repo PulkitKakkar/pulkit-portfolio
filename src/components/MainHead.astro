@@ -18,7 +18,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site || Astro.url.origin)
 <meta name="description" property="og:description" content={description} />
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
-<meta name="theme-color" content="#147d8f" />
+<meta name="theme-color" content="#f6f1e7" />
 <link rel="canonical" href={canonicalUrl} />
 <title>{title}</title>
 
@@ -26,17 +26,17 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site || Astro.url.origin)
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonicalUrl} />
-<meta property="og:image" content={new URL('/assets/portrait.jpg', canonicalUrl)} />
+<meta property="og:image" content={new URL('/og.png', canonicalUrl)} />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={new URL('/assets/portrait.jpg', canonicalUrl)} />
+<meta name="twitter:image" content={new URL('/og.png', canonicalUrl)} />
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
-	href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"
+	href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
 	rel="stylesheet"
 />
 <!-- Google tag (gtag.js) -->

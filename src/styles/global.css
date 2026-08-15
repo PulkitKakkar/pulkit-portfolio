@@ -1,26 +1,26 @@
 /* Global variables */
 :root {
 	/* Colors */
-	--gray-0: #10141f;
-	--gray-50: #1c2433;
-	--gray-100: #273247;
-	--gray-200: #37445c;
-	--gray-300: #536179;
-	--gray-400: #6d7a90;
+	--gray-0: #171912;
+	--gray-50: #24261f;
+	--gray-100: #303229;
+	--gray-200: #45483d;
+	--gray-300: #606458;
+	--gray-400: #777b6f;
 	--gray-500: #8b96a7;
 	--gray-600: #aeb6c2;
 	--gray-700: #d2d7df;
-	--gray-800: #e8ebf0;
-	--gray-900: #f6f7f9;
+	--gray-800: #ddd9ce;
+	--gray-900: #ebe6dc;
 	--gray-999-basis: 0, 0%, 100%;
 	--gray-999_40: hsla(var(--gray-999-basis), 0.4);
-	--gray-999: #ffffff;
+	--gray-999: #f6f1e7;
 
-	--accent-light: #7bd3c1;
-	--accent-regular: #147d8f;
-	--accent-dark: #0e3f59;
-	--accent-warm: #d48a2f;
-	--accent-rose: #b84668;
+	--accent-light: #dfff92;
+	--accent-regular: #b8f24a;
+	--accent-dark: #739d20;
+	--accent-warm: #ffb347;
+	--accent-rose: #ff6b5f;
 	--accent-overlay: hsla(188, 75%, 42%, 0.18);
 	--accent-subtle-overlay: var(--accent-overlay);
 	--accent-text-over: var(--gray-999);
@@ -69,8 +69,8 @@
 	/* Fonts */
 	--font-system: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
 		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	--font-body: 'Public Sans', var(--font-system);
-	--font-brand: Rubik, var(--font-system);
+	--font-body: 'DM Sans', var(--font-system);
+	--font-brand: 'Space Grotesk', var(--font-system);
 
 	/* Transitions */
 	--theme-transition: 0.2s ease-in-out;
@@ -87,18 +87,18 @@
 	--gray-600: #536179;
 	--gray-700: #37445c;
 	--gray-800: #273247;
-	--gray-900: #141925;
-	--gray-999-basis: 225, 31%, 5%;
-	--gray-999: #090b11;
+	--gray-900: #20231c;
+	--gray-999-basis: 72, 18%, 8%;
+	--gray-999: #151710;
 
-	--accent-light: #0e3f59;
-	--accent-regular: #42b7c7;
-	--accent-dark: #8ee2d4;
-	--accent-warm: #f0a94d;
-	--accent-rose: #e66d8d;
-	--accent-overlay: hsla(187, 60%, 52%, 0.3);
-	--accent-subtle-overlay: hsla(187, 60%, 52%, 0.18);
-	--accent-text-over: var(--gray-0);
+	--accent-light: #739d20;
+	--accent-regular: #b8f24a;
+	--accent-dark: #dfff92;
+	--accent-warm: #ffb347;
+	--accent-rose: #ff7469;
+	--accent-overlay: hsla(80, 86%, 62%, 0.3);
+	--accent-subtle-overlay: hsla(80, 86%, 62%, 0.15);
+	--accent-text-over: #151710;
 
 	--link-color: var(--accent-dark);
 

@@ -9,6 +9,7 @@ yarn-error.log*
 # Build output
 dist/
 build/
+.astro/
 
 # Environment variables
 .env
